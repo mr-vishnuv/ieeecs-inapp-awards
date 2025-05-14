@@ -64,7 +64,7 @@ const styles = {
   },
   hero: {
     height: '100vh',
-    backgroundImage: 'url(/inspire.png)',
+    backgroundImage: 'url(/bg.webp)',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
