@@ -24,6 +24,13 @@ export default function Home() {
 
       <section id="about" style={styles.section}>
         <h2>About</h2>
+
+         <div style={styles.subsection}>
+          <h3>IEEE CS - InApp Awards</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor placeat sapiente beatae, accusamus vitae maiores. Voluptatum veritatis corrupti iste unde sapiente cumque explicabo illum laborum reiciendis ratione, rerum maiores dolor.
+          </p>
+        </div>
        
        <div style={styles.subsection}>
           <h3>IEEE Computer Society Kerala Chapter</h3>
