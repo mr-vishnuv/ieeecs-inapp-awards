@@ -51,16 +51,37 @@ export default function Home() {
       <section id="awards" style={styles.section}>
         <h2>Awards</h2>
         <p>
-          Awards include Best Innovation, Best Community Contribution, and Technical Excellence across various domains.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sunt dolorem itaque quidem, non voluptas illum accusamus ut provident dolore dolores quia vel architecto, consequuntur id rem nemo perferendis maxime?
         </p>
       </section>
 
-      <section id="contact" style={styles.section}>
-        <h2>Contact</h2>
-        <p>
-          For inquiries, email us at <a href="mailto:csawards@example.com">csawards@example.com</a>
-        </p>
-      </section>
+      <section id="contact" style={styles.contactSection}>
+  <h2 style={styles.contactHeading}>Contact</h2>
+  <p style={styles.contactText}>Feel free to reach out to our coordinators:</p>
+
+  <div style={styles.contactGrid}>
+    <div style={styles.contactCard}>
+      <h3 style={styles.name}>Name</h3>
+      <p style={styles.role}>Position</p>
+      <p style={styles.detail}>📞 +91 99999999999</p>
+      <p style={styles.detail}>
+        📧 <a href="mailto:alice@example.com" style={styles.email}>mail@mail.com</a>
+      </p>
+    </div>
+
+    <div style={styles.contactCard}>
+      <h3 style={styles.name}>Name</h3>
+      <p style={styles.role}>Position</p>
+      <p style={styles.detail}>📞 +91 9999999999999</p>
+      <p style={styles.detail}>
+        📧 <a href="mailto:bob@example.com" style={styles.email}>mail@mail.com</a>
+      </p>
+    </div>
+  </div>
+</section>
+      <footer style={styles.footer}>
+        <p>&copy; 2025 IEEE CS Kerala Chapter. All rights reserved.</p>
+      </footer> 
     </div>
   );
 }
@@ -133,5 +154,77 @@ const styles = {
     padding: '20px',
     borderRadius: '8px',
     boxShadow: '0 2px 4px rgba(119, 91, 91, 0.1)',
+  },
+
+  contactSection: {
+  backgroundColor: '#f9f9f9',
+  padding: '80px 20px',
+  textAlign: 'center' as const,
+},
+
+contactHeading: {
+  fontSize: '2.5rem',
+  marginBottom: '10px',
+  color: '#222',
+},
+
+contactText: {
+  fontSize: '1.2rem',
+  marginBottom: '30px',
+  color: '#555',
+},
+
+contactGrid: {
+  display: 'flex',
+  justifyContent: 'center',
+  gap: '40px',
+  flexWrap: 'wrap' as const,
+},
+
+contactCard: {
+  backgroundColor: '#ffffff',
+  padding: '20px',
+  borderRadius: '12px',
+  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+  width: '280px',
+  textAlign: 'left' as const,
+},
+
+name: {
+  fontSize: '1.3rem',
+  fontWeight: 'bold',
+  color: '#000',
+  marginBottom: '5px',
+},
+
+role: {
+  fontSize: '1rem',
+  color: '#666',
+  marginBottom: '10px',
+},
+
+detail: {
+  fontSize: '1rem',
+  color: '#333',
+  marginBottom: '5px',
+},
+
+email: {
+  color: '#0070f3',
+  textDecoration: 'none',
+},
+  footer: {
+    backgroundColor: '#222',
+    color: '#fff',
+    textAlign: 'center' as const,
+    padding: '20px 0',
+    position: 'relative' as const,
+    bottom: 0,
+    width: '100%',
+  },
+  footerText: {
+    margin: 0,
+    fontSize: '1rem',
+    color: '#fff',      
   },
 };
