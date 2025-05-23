@@ -5,9 +5,9 @@ import Link from 'next/link';
 export default function Navbar() {
   return (
     <nav style={styles.navbar}>
-      <div style={styles.logoContainer}>
+      {/* <div style={styles.logoContainer}>
         <img src="/logo.png" alt="Logo" style={styles.logo} />
-      </div>
+      </div> */}
       <ul style={styles.navLinks}>
         <li><Link href="/">Home</Link></li>
         <li><Link href="/#about">About</Link></li>
@@ -28,7 +28,7 @@ const styles = {
     // backgroundColor: 'rgba(255, 255, 255, 0.3)',
     color: 'white',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     zIndex: 1000,
     backdropFilter: 'blur(5px)',
