@@ -153,7 +153,7 @@ export default function Home() {
         </tr>
         <tr>
           <td style={styles.tableCell}>Submission of Abstracts</td>
-          <td style={styles.tableCell}>30th June 202</td>
+          <td style={styles.tableCell}>30th June 2025</td>
         </tr>
       </tbody>
     </table>
@@ -210,19 +210,31 @@ const styles = {
     textAlign: 'center' as const,
     padding: '0 20px',
   },
-  logo: {
+
+    logo: {
     maxWidth: '90%',
     maxHeight: '100%',
     objectFit: 'contain',
-    
-  
-  },
+  } as React.CSSProperties,
   logo2: {
     maxWidth: '160%',
     maxHeight: '100%',
     objectFit: 'contain',
     marginLeft: '70px',
-  },
+  } as React.CSSProperties,
+  // logo: {
+  //   maxWidth: '90%',
+  //   maxHeight: '100%',
+  //   objectFit: 'contain',
+    
+  
+  // },
+  // logo2: {
+  //   maxWidth: '160%',
+  //   maxHeight: '100%',
+  //   objectFit: 'contain',
+  //   marginLeft: '70px',
+  
   logoContainer: {
   width: '200px',
   height: '100px',
@@ -255,7 +267,7 @@ const styles = {
     fontWeight: '800', // Extra bold
     marginBottom: '0px',
     color: '#ffffff',
-    textTransform: 'uppercase',
+    textTransform: 'uppercase' as React.CSSProperties['textTransform'],
     
   },
   subheading: {
@@ -373,7 +385,7 @@ email: {
     margin: '0 auto',
   },
   sectionHeader: {
-    textAlign: 'left',
+    textAlign: 'left' as React.CSSProperties['textAlign'],
     marginBottom: '2rem',
     color: '#111827',
   },
@@ -391,14 +403,13 @@ email: {
     borderRadius: '12px',
     padding: '1rem',
     transition: 'box-shadow 0.3s ease, transform 0.3s ease',
-  backgroundColor: '#fff',
-  cursor: 'pointer',
-  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)',
-  ':hover': {
-    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)',
-    transform: 'translateY(-4px)',
-  },
     backgroundColor: '#fff',
+    cursor: 'pointer',
+    boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)',
+    ':hover': {
+      boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)',
+      transform: 'translateY(-4px)',
+    },
   },
   cardHeader: {
     marginBottom: '0.75rem',
@@ -482,14 +493,14 @@ unorderedList: {
 
 table: {
   width: '100%',
-  borderCollapse: 'collapse',
+  borderCollapse: 'collapse' as 'collapse',
   fontSize: '0.95rem',
   color: '#374151',
   marginTop: '1rem',
 },
 
 tableHeader: {
-  textAlign: 'left',
+  textAlign: 'left' as React.CSSProperties['textAlign'],
   padding: '0.5rem',
   backgroundColor: '#f3f4f6',
   border: '1px solid #ddd',
