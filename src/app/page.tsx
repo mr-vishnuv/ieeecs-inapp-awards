@@ -1,20 +1,22 @@
+import './page.css';
+import { Award, Users, Building2, Trophy, Calendar, Phone, Mail } from 'lucide-react';
 export default function Home() {
   return (
     <div style={styles.container}>
       <section style={styles.hero}>
-         <div style={styles.logoRow}>
-            <div style={styles.logoContainer}>
-              <img src="/logo.png" alt="IEEE CS Logo" style={styles.logo} />
+         <div style={styles.logoRow} className="logoRow">
+            <div style={styles.logoContainer} className="logoContainer">
+              <img src="/logo.png" alt="IEEE CS Logo" style={styles.logo} className="logo"/>
             </div>
             <div style={styles.logoContainer}>
-              <img src="/inapp-logo1.png" alt="InApp Logo" style={styles.logo2} />
+              <img src="/inapp-logo1.png" alt="InApp Logo" style={styles.logo2} className="logo2"/>
             </div>
          </div>
 
           {/* <img src="/heading.png" alt="Heading Text" style={styles.headingImage} /> */}
        
-        <h1 style={styles.heading}>InApp - IEEE CS Student Project Awards</h1>
-        <p style={styles.subheading}>Inspiring New Solutions, Propelling Innovation, Realizing Excellence</p>
+        <h1 style={styles.heading} className="responsiveHeading">InApp - IEEE CS Student Project Awards</h1>
+        <p style={styles.subheading} className="responsiveSubheading">Inspiring New Solutions, Propelling Innovation, Realizing Excellence</p>
        
         <a
           href="https://your-form-link.com"
@@ -26,169 +28,222 @@ export default function Home() {
         </a>
       </section>
       
+    <section style={styles.aboutSection} id="about">
+        <div style={styles.sectionContainer}>
+          <div style={styles.sectionHeader}>
+            <div style={styles.sectionBadge}>About</div>
+            <h2 style={styles.sectionTitle}>Empowering Innovation Through Excellence</h2>
+            <p style={styles.sectionSubtitle}>
+              Discover the partnership that's shaping the future of technology education and innovation
+            </p>
+          </div>
 
-<section style={styles.awardsSection} id="about">
-  <div style={styles.sectionHeader}>
-    <h2 style={styles.sectionHeaderTitle}>About</h2>
-  </div>
+          <div style={styles.aboutCardsGrid} className="about-cards-grid">
+            <div style={styles.aboutCard} className="about-card">
+              <div style={styles.aboutCardIcon}>
+                <Award size={32} color="white" />
+              </div>
+              <div style={styles.aboutCardContent}>
+                <h3 style={styles.aboutCardTitle}>IEEE CS - InApp Awards</h3>
+                <p style={styles.aboutCardText}>
+                  The objective behind the establishment of CSI-InApp Awards is to provide a challenging and creative ground for students to showcase their skills in software development.
+                </p>
+                <p style={styles.aboutCardText}>
+                  For the 14th edition, we're partnering with Kerala Technological University to invite students internationally to submit their projects for evaluation by industry pioneers.
+                </p>
+              </div>
+            </div>
 
-  <div style={styles.cardsGrid}>
-    {/* Awards Card */}
-    <div style={styles.card}>
-      <div style={styles.cardHeader}>
-        <div style={styles.iconTitle}>
-          <div style={styles.iconCircle}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#4B5563" style={styles.svgIcon}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 1 0-7.18 0L6 21l6-3 6 3-2.41-6.63z" />
-            </svg>
+            <div style={styles.aboutCard} className="about-card">
+              <div style={styles.aboutCardIcon}>
+                <Users size={32} color="white" />
+              </div>
+              <div style={styles.aboutCardContent}>
+                <h3 style={styles.aboutCardTitle}>IEEE Computer Society</h3>
+                <p style={styles.aboutCardText}>
+                  The IEEE Computer Society Kerala Chapter is a professional organization promoting the advancement of computer science and engineering in Kerala.
+                </p>
+                <p style={styles.aboutCardText}>
+                  We organize technical talks, workshops, seminars, and conferences while supporting students through chapters, competitions, and scholarships.
+                </p>
+              </div>
+            </div>
+
+            <div style={styles.aboutCard} className="about-card">
+              <div style={styles.aboutCardIcon}>
+                <Building2 size={32} color="white" />
+              </div>
+              <div style={styles.aboutCardContent}>
+                <h3 style={styles.aboutCardTitle}>InApp Technologies</h3>
+                <p style={styles.aboutCardText}>
+                  Founded in 2000, InApp is a technology services company committed to excellence with a passionate team focused on delivering value.
+                </p>
+                <p style={styles.aboutCardText}>
+                  With offices in USA, India, Japan and a 200+ strong team, InApp serves clients ranging from Fortune 500 companies to SMBs.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-          <h3>IEEE CS - InApp Awards</h3>
+      </section>
+
+ <section id="awards" style={styles.awardsSection}>
+        <div style={styles.sectionContainer}>
+          <div style={styles.sectionHeader}>
+            <div style={styles.sectionBadge}>Awards</div>
+            <h2 style={styles.sectionTitle}>Competition Details & Guidelines</h2>
+            <p style={styles.sectionSubtitle}>
+              Everything you need to know about participating in the IEEE CS InApp Awards
+            </p>
+          </div>
+
+          <div style={styles.awardsGrid} className="awards-grid">
+            {/* Award Rules Card */}
+            <div style={styles.awardsCard} className="awards-card">
+              <div style={styles.awardsCardHeader}>
+                <Trophy size={24} color="#CC232E" />
+                <h3 style={styles.awardsCardTitle}>Award Rules</h3>
+              </div>
+              <div style={styles.awardsCardContent}>
+                <ol style={styles.rulesList}>
+                  <li>There is no fee for participation.</li>
+                  <li>Open to all B.E/B.Tech students from affiliated colleges/Universities worldwide.</li>
+                  <li>Teams can have up to five members from the same Institution with a faculty guide.</li>
+                  <li>Submit a two-page abstract in the specified format.</li>
+                  <li>Project must be original work.</li>
+                  <li>Submit certified abstract online.</li>
+                  <li>Two-stage expert evaluation process.</li>
+                  <li>Winners selected for second round via email notification.</li>
+                  <li>Second round evaluation through video conferencing.</li>
+                  <li>Final demonstration before judging panel via video conferencing.</li>
+                  <li>Evaluation based on Innovativeness, Feasibility, and Relevance.</li>
+                  <li>Award evaluation committee decisions are final.</li>
+                </ol>
+              </div>
+            </div>
+
+            {/* Prizes Card */}
+            <div style={styles.awardsCard} className="awards-card">
+              <div style={styles.awardsCardHeader}>
+                <Award size={24} color="#CC232E" />
+                <h3 style={styles.awardsCardTitle}>Prizes</h3>
+              </div>
+              <div style={styles.awardsCardContent}>
+                <div style={styles.prizeItem}>
+                  <div style={styles.prizeIcon}>🥇</div>
+                  <div>
+                    <h4 style={styles.prizeTitle}>First Prize</h4>
+                    <p style={styles.prizeAmount}>Award Instrument + ₹50,000</p>
+                  </div>
+                </div>
+                <div style={styles.prizeItem}>
+                  <div style={styles.prizeIcon}>🥈</div>
+                  <div>
+                    <h4 style={styles.prizeTitle}>Consolation Prize</h4>
+                    <p style={styles.prizeAmount}>Award Instrument + ₹25,000</p>
+                  </div>
+                </div>
+                <div style={styles.bonusCard}>
+                  <p style={styles.bonusText}>
+                    <strong>Bonus:</strong> Placement opportunities and cash prizes for all finalists
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Timeline */}
+          <div style={styles.timelineCard} className="timeline-card">
+            <div style={styles.timelineHeader}>
+              <Calendar size={24} color="#CC232E" />
+              <h3 style={styles.timelineTitle}>Important Dates</h3>
+            </div>
+            <div style={styles.timelineContent}>
+              <div style={styles.timelineItem}>
+                <div style={styles.timelineDot}></div>
+                <div style={styles.timelineInfo}>
+                  <h4 style={styles.timelineEventTitle}>Call for Abstracts</h4>
+                  <p style={styles.timelineDate}>20th June 2025</p>
+                </div>
+              </div>
+              <div style={styles.timelineItem}>
+                <div style={styles.timelineDot}></div>
+                <div style={styles.timelineInfo}>
+                  <h4 style={styles.timelineEventTitle}>Submission Deadline</h4>
+                  <p style={styles.timelineDate}>30th June 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div>
-        <p style={styles.cardContentP}>
-          The objective behind the establishment of CSI-InApp Awards is to provide a challenging and creative ground for students to showcase their skills in software development.
-        </p>
-        <p style={styles.cardContentP}>
-          For the 14th edition, we're partnering with Kerala Technological University to invite students internationally to submit their projects for evaluation by industry pioneers.
-        </p>
-      </div>
-    </div>
+      </section>
+       <section id="contact" style={styles.contactSection}>
+        <div style={styles.sectionContainer}>
+          <div style={styles.sectionHeader}>
+            <div style={styles.sectionBadge}>Contact</div>
+            <h2 style={styles.sectionTitle}>Get in Touch</h2>
+            <p style={styles.sectionSubtitle}>
+              Have questions? Our coordinators are here to help you succeed
+            </p>
+          </div>
 
-    {/* IEEE Computer Society Kerala Chapter */}
-    <div style={styles.card}>
-      <div style={styles.cardHeader}>
-        <div style={styles.iconTitle}>
-          <div style={styles.iconCircle}>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#4B5563" style={styles.svgIcon}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.25a8.25 8.25 0 0115.001 0" />
-        </svg>
-      </div>
-          <h3>IEEE Computer Society</h3>
+          <div style={styles.contactGrid} className="contact-grid">
+            <div style={styles.contactCard} className="contact-card">
+              <div style={styles.contactCardHeader}>
+                <div style={styles.contactAvatar}>
+                  <Users size={24} color="white" />
+                </div>
+                <div>
+                  <h3 style={styles.contactName}>Coordinator Name</h3>
+                  <p style={styles.contactRole}>Project Coordinator</p>
+                </div>
+              </div>
+              <div style={styles.contactDetails}>
+                <div style={styles.contactItem}>
+                  <Phone size={18} color="#CC232E" />
+                  <span style={styles.contactText}>+91 99999999999</span>
+                </div>
+                <div style={styles.contactItem}>
+                  <Mail size={18} color="#CC232E" />
+                  <a href="mailto:coordinator@example.com" style={styles.contactLink}>
+                    coordinator@example.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div style={styles.contactCard} className="contact-card">
+              <div style={styles.contactCardHeader}>
+                <div style={styles.contactAvatar}>
+                  <Users size={24} color="white" />
+                </div>
+                <div>
+                  <h3 style={styles.contactName}>Coordinator Name</h3>
+                  <p style={styles.contactRole}>Technical Coordinator</p>
+                </div>
+              </div>
+              <div style={styles.contactDetails}>
+                <div style={styles.contactItem}>
+                  <Phone size={18} color="#CC232E" />
+                  <span style={styles.contactText}>+91 9999999999</span>
+                </div>
+                <div style={styles.contactItem}>
+                  <Mail size={18} color="#CC232E" />
+                  <a href="mailto:technical@example.com" style={styles.contactLink}>
+                    technical@example.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div>
-        <p style={styles.cardContentP}>
-          The IEEE Computer Society Kerala Chapter is a professional organization promoting the advancement of computer science and engineering in Kerala.
-        </p>
-        <p style={styles.cardContentP}>
-          We organize technical talks, workshops, seminars, and conferences while supporting students through chapters, competitions, and scholarships.
-        </p>
-      </div>
-    </div>
+      </section>
 
-    {/* InApp Technologies */}
-    <div style={styles.card}>
-      <div style={styles.cardHeader}>
-        <div style={styles.iconTitle}>
-           <div style={styles.iconCircle}>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#4B5563" style={styles.svgIcon}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3 20.25h18M4.5 3.75h15a.75.75 0 01.75.75v15.75H3.75V4.5a.75.75 0 01.75-.75zM8.25 9h.008v.008H8.25V9zM8.25 12h.008v.008H8.25V12zM8.25 15h.008v.008H8.25V15zM11.25 9h.008v.008H11.25V9zM11.25 12h.008v.008H11.25V12zM11.25 15h.008v.008H11.25V15zM14.25 9h.008v.008H14.25V9zM14.25 12h.008v.008H14.25V12zM14.25 15h.008v.008H14.25V15z" />
-        </svg>
-      </div>
-          <h3>InApp Technologies</h3>
-        </div>
-      </div>
-      <div>
-        <p style={styles.cardContentP}>
-          Founded in 2000, InApp is a technology services company committed to excellence with a passionate team focused on delivering value.
-        </p>
-        <p style={styles.cardContentP}>
-          With offices in USA, India, Japan and a 200+ strong team, InApp serves clients ranging from Fortune 500 companies to SMBs.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section id="awards" style={styles.awardsSection}>
-  <div style={styles.sectionHeader}>
-    <h2 style={styles.sectionHeaderTitle}>Awards</h2>
-  </div>
-
-  {/* Award Rules */}
-  <div style={styles.textBlock}>
-    <h3 style={styles.subHeader}>Award Rules:</h3>
-    <ol style={styles.orderedList}>
-      <li>There is no fee for participation.</li>
-      <li>The contest is open to all students studying B.E/B.Tech from affiliated colleges/Universities worldwide.</li>
-      <li>Participation is open to teams which can have up to five members. Team members can be from any semester, but from the same Institution. There should be a faculty member for each team as the Team Guide.</li>
-      <li>Teams must submit a two page abstract of their project in a specified format.</li>
-      <li>The project must be an original work.</li>
-      <li>The copy of the certified abstract should be submitted online.</li>
-      <li>The winners are decided based on a two-stage expert evaluation. The first stage evaluation of the abstract is based on the project idea and its implementation prospects.</li>
-      <li>The winners selected for second round presentation will be intimated via email.</li>
-      <li>The second round evaluation will be through video conferencing.</li>
-      <li>The final stage of evaluation is the demonstration of the software project before the judging panel which will also be conducted through video conferencing.</li>
-      <li>Project entries will be evaluated based on factors such as Innovativeness, Feasibility, and Relevance.</li>
-      <li>The decisions of the award evaluation committee shall be final.</li>
-    </ol>
-  </div>
-
-  {/* Prizes */}
-  <div style={styles.textBlock}>
-    <h3 style={styles.subHeader}>Prizes:</h3>
-    <ul style={styles.unorderedList}>
-      <li><strong>First Prize:</strong> Award Instrument and Rs 50,000</li>
-      <li><strong>Consolation Prize:</strong> Award Instrument and Rs 25,000</li>
-      <li>Placement opportunities and cash prize for all finalists</li>
-    </ul>
-  </div>
-
-  {/* Scheduled Dates Table */}
-  <div style={styles.textBlock}>
-    <h3 style={styles.subHeader}>Scheduled Dates:</h3>
-    <table style={styles.table}>
-      <thead>
-        <tr>
-          <th style={styles.tableHeader}>Event</th>
-          <th style={styles.tableHeader}>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style={styles.tableCell}>Call for Abstracts</td>
-          <td style={styles.tableCell}>20th June 2025</td>
-        </tr>
-        <tr>
-          <td style={styles.tableCell}>Submission of Abstracts</td>
-          <td style={styles.tableCell}>30th June 2025</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-
-      <section id="contact" style={styles.contactSection}>
-  <h2 style={styles.contactHeading}>Contact</h2>
-  <p style={styles.contactText}>Feel free to reach out to our coordinators:</p>
-
-  <div style={styles.contactGrid}>
-    <div style={styles.contactCard}>
-      <h3 style={styles.name}>Name</h3>
-      <p style={styles.role}>Position</p>
-      <p style={styles.detail}>📞 +91 99999999999</p>
-      <p style={styles.detail}>
-        📧 <a href="mailto:alice@example.com" style={styles.email}>mail@mail.com</a>
-      </p>
-    </div>
-
-    <div style={styles.contactCard}>
-      <h3 style={styles.name}>Name</h3>
-      <p style={styles.role}>Position</p>
-      <p style={styles.detail}>📞 +91 9999999999999</p>
-      <p style={styles.detail}>
-        📧 <a href="mailto:bob@example.com" style={styles.email}>mail@mail.com</a>
-      </p>
-    </div>
-  </div>
-</section>
       <footer style={styles.footer}>
         <p>&copy; 2025 IEEE CS Kerala Chapter. All rights reserved.</p>
       </footer> 
     </div>
+    
   );
 }
 
@@ -222,18 +277,6 @@ const styles = {
     objectFit: 'contain',
     marginLeft: '70px',
   } as React.CSSProperties,
-  // logo: {
-  //   maxWidth: '90%',
-  //   maxHeight: '100%',
-  //   objectFit: 'contain',
-    
-  
-  // },
-  // logo2: {
-  //   maxWidth: '160%',
-  //   maxHeight: '100%',
-  //   objectFit: 'contain',
-  //   marginLeft: '70px',
   
   logoContainer: {
   width: '200px',
@@ -249,22 +292,10 @@ const styles = {
     alignItems: 'center',
     marginBottom: '-30px',
   },
-  // heading: {
-  //   fontSize: '3rem',
-  //   fontWeight: 'extra-bold',
-  //   marginBottom: '10px',
-  // },
-  // subheading: {
-  //   fontStyle: 'italic',  // Correct property for italics
-  //   fontWeight: '300',    // '300' or 'lighter' for light font weight
-  //   color: '#ffffff',     // White color
-  //   fontSize: '1.2rem',   // Font size
-  //   marginBottom: '30px', // Space at the bottom
-  // },
   heading: {
-    fontFamily: 'Nexa', // Primary and fallback fonts
+    fontFamily: 'Nexa', 
     fontSize: '3rem',
-    fontWeight: '800', // Extra bold
+    fontWeight: '800', 
     marginBottom: '0px',
     color: '#ffffff',
     textTransform: 'uppercase' as React.CSSProperties['textTransform'],
@@ -293,77 +324,277 @@ const styles = {
     fontSize: '1rem',
     transition: 'all 0.3s ease',
   },
-  section: {
-    padding: '60px 20px',
-    maxWidth: '900px',
+
+ sectionContainer: {
+    maxWidth: '1200px',
     margin: '0 auto',
+    padding: '0 20px',
+  },
+  sectionHeader: {
+    textAlign: 'center' as const,
+    marginBottom: '4rem',
+  },
+  sectionBadge: {
+    display: 'inline-block',
+    backgroundColor: '#CC232E',
+    color: 'white',
+    padding: '8px 24px',
+    borderRadius: '50px',
+    fontSize: '0.9rem',
+    fontWeight: '600',
+    textTransform: 'uppercase' as const,
+    letterSpacing: '1px',
+    marginBottom: '1rem',
+  },
+  sectionTitle: {
+    fontSize: '2.5rem',
+    fontWeight: '700',
+    color: '#1a1a1a',
+    marginBottom: '1rem',
+    lineHeight: '1.2',
+  },
+  sectionSubtitle: {
+    fontSize: '1.2rem',
+    color: '#666',
+    maxWidth: '600px',
+    margin: '0 auto',
+    lineHeight: '1.6',
+  },
+
+  // About Section
+  aboutSection: {
+    padding: '6rem 0',
+    backgroundColor: '#f8f9fa',
+  },
+  aboutCardsGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+    gap: '2rem',
+    marginTop: '3rem',
+  },
+  aboutCard: {
+    backgroundColor: 'white',
+    borderRadius: '20px',
+    padding: '2rem',
+    boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+    transition: 'all 0.3s ease',
+    position: 'relative' as const,
+    overflow: 'hidden',
+  },
+  aboutCardIcon: {
+    width: '80px',
+    height: '80px',
+    backgroundColor: '#CC232E',
+    borderRadius: '20px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: '1.5rem',
+    position: 'relative' as const,
+  },
+  aboutCardContent: {
+    position: 'relative' as const,
+    zIndex: 2,
+  },
+  aboutCardTitle: {
+    fontSize: '1.5rem',
+    fontWeight: '700',
+    color: '#1a1a1a',
+    marginBottom: '1rem',
+  },
+  aboutCardText: {
+    fontSize: '1rem',
+    color: '#666',
+    lineHeight: '1.7',
+    marginBottom: '1rem',
+  },
+  // Awards Section
+  awardsSection: {
+    padding: '6rem 0',
+    backgroundColor: 'white',
+  },
+  awardsGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))',
+    gap: '2rem',
+    marginBottom: '3rem',
+  },
+  awardsCard: {
+    backgroundColor: '#f8f9fa',
+    borderRadius: '20px',
+    padding: '2rem',
+    border: '1px solid #e9ecef',
+  },
+  awardsCardHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
+    marginBottom: '1.5rem',
+  },
+  awardsCardTitle: {
+    fontSize: '1.5rem',
+    fontWeight: '700',
+    color: '#1a1a1a',
+  },
+  awardsCardContent: {
+    color: '#666',
+  },
+  rulesList: {
+    paddingLeft: '1.5rem',
+    lineHeight: '1.8',
+    fontSize: '1rem',
+  },
+  prizeItem: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
+    padding: '1rem',
+    backgroundColor: 'white',
+    borderRadius: '12px',
+    marginBottom: '1rem',
+    boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
+  },
+  prizeIcon: {
+    fontSize: '2rem',
+  },
+  prizeTitle: {
+    fontSize: '1.2rem',
+    fontWeight: '600',
+    color: '#1a1a1a',
+    margin: '0 0 0.5rem 0',
+  },
+  prizeAmount: {
+    fontSize: '1rem',
+    color: '#CC232E',
+    fontWeight: '600',
+    margin: 0,
+  },
+  bonusCard: {
+    backgroundColor: '#CC232E',
+    color: 'white',
+    padding: '1rem',
+    borderRadius: '12px',
     textAlign: 'center' as const,
   },
-  subsection: {
-    marginTop: '30px',
-    backgroundColor: '#f9f9f9',
-    padding: '20px',
-    borderRadius: '8px',
-    boxShadow: '0 2px 4px rgba(119, 91, 91, 0.1)',
+  bonusText: {
+    margin: 0,
+    fontSize: '1rem',
   },
 
+  // Timeline
+  timelineCard: {
+    backgroundColor: '#f8f9fa',
+    borderRadius: '20px',
+    padding: '2rem',
+    border: '1px solid #e9ecef',
+  },
+  timelineHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
+    marginBottom: '2rem',
+  },
+  timelineTitle: {
+    fontSize: '1.5rem',
+    fontWeight: '700',
+    color: '#1a1a1a',
+  },
+  timelineContent: {
+    display: 'flex',
+    flexDirection: 'column' as const,
+    gap: '1.5rem',
+  },
+  timelineItem: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
+  },
+  timelineDot: {
+    width: '16px',
+    height: '16px',
+    backgroundColor: '#CC232E',
+    borderRadius: '50%',
+    flexShrink: 0,
+  },
+  timelineInfo: {
+    flex: 1,
+  },
+  timelineEventTitle: {
+    fontSize: '1.1rem',
+    fontWeight: '600',
+    color: '#1a1a1a',
+    margin: '0 0 0.5rem 0',
+  },
+  timelineDate: {
+    fontSize: '1rem',
+    color: '#666',
+    margin: 0,
+  },
   contactSection: {
-  backgroundColor: '#f9f9f9',
-  padding: '80px 20px',
-  textAlign: 'center' as const,
-},
+    padding: '6rem 0',
+    backgroundColor: '#1a1a1a',
+    color: 'white',
+  },
+  contactGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gap: '2rem',
+    marginTop: '3rem',
+  },
+  contactCard: {
+    backgroundColor: 'white',
+    borderRadius: '20px',
+    padding: '2rem',
+    color: '#1a1a1a',
+    transition: 'all 0.3s ease',
+  },
+  contactCardHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
+    marginBottom: '1.5rem',
+  },
+  contactAvatar: {
+    width: '60px',
+    height: '60px',
+    backgroundColor: '#CC232E',
+    borderRadius: '50%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  contactName: {
+    fontSize: '1.3rem',
+    fontWeight: '700',
+    color: '#1a1a1a',
+    margin: '0 0 0.5rem 0',
+  },
+  contactRole: {
+    fontSize: '1rem',
+    color: '#666',
+    margin: 0,
+  },
+  contactDetails: {
+    display: 'flex',
+    flexDirection: 'column' as const,
+    gap: '1rem',
+  },
+  contactItem: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.75rem',
+  },
+  contactText: {
+    fontSize: '1rem',
+    color: '#1a1a1a',
+  },
+  contactLink: {
+    fontSize: '1rem',
+    color: '#CC232E',
+    textDecoration: 'none',
+    fontWeight: '500',
+  },
 
-contactHeading: {
-  fontSize: '2.5rem',
-  marginBottom: '10px',
-  color: '#222',
-},
-
-contactText: {
-  fontSize: '1.2rem',
-  marginBottom: '30px',
-  color: '#555',
-},
-
-contactGrid: {
-  display: 'flex',
-  justifyContent: 'center',
-  gap: '40px',
-  flexWrap: 'wrap' as const,
-},
-
-contactCard: {
-  backgroundColor: '#ffffff',
-  padding: '20px',
-  borderRadius: '12px',
-  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-  width: '280px',
-  textAlign: 'left' as const,
-},
-
-name: {
-  fontSize: '1.3rem',
-  fontWeight: 'bold',
-  color: '#000',
-  marginBottom: '5px',
-},
-
-role: {
-  fontSize: '1rem',
-  color: '#666',
-  marginBottom: '10px',
-},
-
-detail: {
-  fontSize: '1rem',
-  color: '#333',
-  marginBottom: '5px',
-},
-
-email: {
-  color: '#0070f3',
-  textDecoration: 'none',
-},
   footer: {
     backgroundColor: '#222',
     color: '#fff',
@@ -373,143 +604,6 @@ email: {
     bottom: 0,
     width: '100%',
   },
-  footerText: {
-    margin: 0,
-    fontSize: '1rem',
-    color: '#fff',      
-  },
-  
-  awardsSection: {
-    padding: '2rem 1rem',
-    maxWidth: '1100px',
-    margin: '0 auto',
-  },
-  sectionHeader: {
-    textAlign: 'left' as React.CSSProperties['textAlign'],
-    marginBottom: '2rem',
-    color: '#111827',
-  },
-  sectionHeaderTitle: {
-    fontSize: '2.25rem',
-    fontWeight: 'bold',
-  },
-  cardsGrid: {
-    display: 'grid',
-    gap: '1.5rem',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-  },
-  card: {
-    border: '1px solid #ddd',
-    borderRadius: '12px',
-    padding: '1rem',
-    transition: 'box-shadow 0.3s ease, transform 0.3s ease',
-    backgroundColor: '#fff',
-    cursor: 'pointer',
-    boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)',
-    ':hover': {
-      boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)',
-      transform: 'translateY(-4px)',
-    },
-  },
-  cardHeader: {
-    marginBottom: '0.75rem',
-  },
-  iconTitle: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '0.5rem',
-  },
-  icon: {
-    backgroundColor: '#f3f4f6',
-    padding: '0.5rem',
-    borderRadius: '50%',
-    fontSize: '1.2rem',
-  },
-  cardContentP: {
-    fontSize: '0.95rem',
-    color: '#374151',
-    marginTop: '0.5rem',
-  },
-  badges: {
-    marginTop: '1rem',
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '0.5rem',
-  },
-  badge: {
-    padding: '0.3rem 0.6rem',
-    borderRadius: '6px',
-    fontSize: '0.8rem',
-    fontWeight: '500',
-  },
-  badgeSecondary: {
-    backgroundColor: '#e0e7ff',
-    color: '#3730a3',
-  },
-  badgeOutline: {
-    border: '1px solid #ccc',
-    backgroundColor: 'transparent',
-    color: '#333',
-  },
-  iconCircle: {
-  backgroundColor: '#F3F4F6', // Matches image background
-  borderRadius: '9999px', // Fully rounded
-  padding: '0.5rem',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '40px',
-  height: '40px',
-},
-svgIcon: {
-  width: '20px',
-  height: '20px',
-  stroke: '#4B5563', // Icon stroke color (dark gray)
-},
-textBlock: {
-  marginBottom: '2rem',
-},
 
-subHeader: {
-  fontSize: '1.25rem',
-  fontWeight: '600',
-  marginBottom: '0.75rem',
-  color: '#1f2937',
-},
-
-orderedList: {
-  paddingLeft: '1.5rem',
-  lineHeight: '1.75',
-  fontSize: '0.95rem',
-  color: '#374151',
-},
-
-unorderedList: {
-  paddingLeft: '1.5rem',
-  fontSize: '0.95rem',
-  color: '#374151',
-  lineHeight: '1.75',
-},
-
-table: {
-  width: '100%',
-  borderCollapse: 'collapse' as 'collapse',
-  fontSize: '0.95rem',
-  color: '#374151',
-  marginTop: '1rem',
-},
-
-tableHeader: {
-  textAlign: 'left' as React.CSSProperties['textAlign'],
-  padding: '0.5rem',
-  backgroundColor: '#f3f4f6',
-  border: '1px solid #ddd',
-  fontWeight: '600',
-},
-
-tableCell: {
-  padding: '0.5rem',
-  border: '1px solid #ddd',
-},
 
 };

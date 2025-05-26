@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+  .logoContainer {
+    width: 120px !important;
+    height: 60px !important;
+    margin: 0 5px !important;
+  }
+  .logo {
+    max-width: 100% !important;
+    max-height: 60px !important;
+  }
+  .logo2 {
+    max-width: 120% !important;
+    max-height: 60px !important;
+    margin-left: 20px !important;
+  }
+  h1.responsiveHeading {
+    font-size: 2rem !important;
+    margin-bottom: 10px !important;
+  }
+  p.responsiveSubheading {
+    font-size: 1rem !important;
+    margin-bottom: 20px !important;
+  }
+  .logoRow {
+    justify-content: center !important;
+  }
+}
