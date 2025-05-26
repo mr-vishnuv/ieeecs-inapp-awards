@@ -126,4 +126,15 @@ const styles = {
     fontWeight: '500',
     gap: '25px',
   },
+  hamburger: {
+    position: 'absolute' as const,
+    right: 20,
+    top: 12,
+    fontSize: 24,
+    background: 'none',
+    border: 'none',
+    color: 'white',
+    cursor: 'pointer',
+    zIndex: 1100,
+  },
 };
